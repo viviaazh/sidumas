@@ -17,7 +17,7 @@
                 redirect('login','refresh');   
             }
 
-            // $this->load->helper('url');
+            $this->load->helper('url');
             // $this->load->helper('form');
             // $this->load->model('login_model');
         }
@@ -27,7 +27,7 @@
             $data['title']='Login';
             $this->load->view('template/header_login',$data);
             $this->load->view('login/index');
-            // $this->load->view('template/footer');
+            $this->load->view('template/footer_login');
         }
 
 
@@ -61,7 +61,7 @@
                 $data['title']='Login';
                 $this->load->view('template/header_login',$data);
                 $this->load->view('login/index',$data);
-                // $this->load->view('template/footer');
+                $this->load->view('template/footer_login');
                 //redirect('login/index','refresh');
             }
         }
