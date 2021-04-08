@@ -34,7 +34,7 @@
 	          </form>
 	          <div class="w-100 text-center mt-4 text">
 	          	<p class="mb-0">Belum punya akun?</p>
-		          <a href="#">Daftar</a>
+		          <a href="registrasi">Daftar</a>
 	          </div>
 	        </div>
 				</div>

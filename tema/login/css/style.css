@@ -1526,7 +1526,7 @@ pre {
 
 .table .thead-light th {
   color: #495057;
-  background-color: #e9ecef;
+  background-color: #000;
   border-color: #dee2e6; }
 
 .table-dark {
@@ -1597,7 +1597,7 @@ pre {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: #000;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -1634,7 +1634,7 @@ pre {
     color: #6c757d;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
-    background-color: #e9ecef;
+    background-color: #6c757d;
     opacity: 1; }
 
 select.form-control:focus::-ms-value {
@@ -1673,7 +1673,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   line-height: 1.5;
   color: #212529;
-  background-color: transparent;
+  background-color: #fff;
   border: solid transparent;
   border-width: 1px 0; }
   .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
@@ -2931,7 +2931,7 @@ input[type="button"].btn-block {
   color: #495057;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
+  background-color: #000;
   border: 1px solid #ced4da;
   border-radius: 0.25rem; }
   .input-group-text input[type="radio"],
@@ -3007,7 +3007,7 @@ input[type="button"].btn-block {
   z-index: -1;
   opacity: 0; }
   .custom-control-input:checked ~ .custom-control-label::before {
-    color: #fff;
+    color: #000;
     border-color: #007bff;
     background-color: #007bff; }
   .custom-control-input:focus ~ .custom-control-label::before {
@@ -3022,7 +3022,7 @@ input[type="button"].btn-block {
   .custom-control-input:disabled ~ .custom-control-label {
     color: #6c757d; }
     .custom-control-input:disabled ~ .custom-control-label::before {
-      background-color: #e9ecef; }
+      background-color: #000; }
 
 .custom-control-label {
   position: relative;
@@ -8244,19 +8244,19 @@ h1, h2, h3, h4, h5,
     color: rgba(0, 0, 0, 0.8) !important; }
   .form-control::-moz-placeholder {
     /* Firefox 19+ */
-    color: rgba(255, 255, 255, 0.8) !important; }
+    color: rgba(0, 0, 0, 0.8) !important; }
   .form-control:-ms-input-placeholder {
     /* IE 10+ */
-    color: rgba(255, 255, 255, 0.8) !important; }
+    color: rgba(0,0,0, 0.8) !important; }
   .form-control:-moz-placeholder {
     /* Firefox 18- */
-    color: rgba(255, 255, 255, 0.8) !important; }
+    color: rgba(0,0,0, 0.8) !important; }
   .form-control:focus, .form-control:active {
     outline: none !important;
     -webkit-box-shadow: none;
     box-shadow: none;
     background: rgba(0, 0, 0, 0.07);
-    border-color: #b689b0; }
+    border-color: #ffdb15; }
 
 .text a {
   text-transform: uppercase; }

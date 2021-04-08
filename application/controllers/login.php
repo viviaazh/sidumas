@@ -34,21 +34,21 @@
         public function proses_login()
         {
 
-            $username=htmlspecialchars($this->input->post('uname1'));
+            $email=htmlspecialchars($this->input->post('uname1'));
             $password=htmlspecialchars($this->input->post('pwd1'));
             $this->load->model('login_model');
 
-            $ceklogin=$this->login_model->login($username,$password);
+            $ceklogin=$this->login_model->login($email,$password);
 
             if ($ceklogin) {
                 foreach($ceklogin as $row);
 
-                $this->session->set_userdata('user',$row->username);
+                $this->session->set_userdata('user',$row->email);
                 $this->session->set_userdata('level',$row->level);
 
                 if ($this->session->userdata('level')=="admin") 
                 {
-                    redirect('admin/index');
+                    redirect('dashboard_admin');
                 }
                 elseif($this->session->userdata('level')=="user")
                 {
@@ -57,7 +57,7 @@
             }
             else
             {  
-                $data['pesan']="username dan password anda salah";
+                $data['pesan']="Email dan Password Anda Salah";
                 $data['title']='Login';
                 $this->load->view('template/header_login',$data);
                 $this->load->view('login/index',$data);
