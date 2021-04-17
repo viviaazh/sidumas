@@ -83,6 +83,9 @@
                   <li><a href="<?= base_url(); ?>pengaduan/index/"><i class="fa fa-edit"></i> Pengaduan </a>
                    
                   </li>
+                  <li><a href="<?= base_url(); ?>laporan_admin/index/"><i class="fa fa-book"></i> Laporan </a>
+                   
+                  </li>
                   <!-- <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>

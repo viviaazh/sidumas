@@ -5,7 +5,8 @@
     </div>
 <?php } ?>
 <div class="right_col" role="main">
-<button type="button" class="btn btn-primary">Tambah Data</button>
+<a href="<?= base_url(); ?>pengaduan/add_new" class="btn btn-primary">Tambah Data</a>
+<!-- <button type="button" class="btn btn-primary">Tambah Data</button> -->
           <!-- <div class="">
             <div class="page-title">
               <div class="title_left">
@@ -55,31 +56,35 @@
                         <tr>
                           <th>#</th>
                           <th>Judul</th>
-                          <th>Desa</th>
                           <th>Kecamatan</th>
-                          <th>Keterangan</th>
-                          <th></th>
+                          <th>Desa</th>
+                          <!-- <th>Keterangan</th> -->
+                          <th>Status</th>
+                          <th>Aksi</th>
                         </tr>
                       </thead>
 
                       <tbody>
-                        <?php 
-                            $no=1;
-                            foreach ($pengaduan as $pg) { ?>
+                      <?php
+	      				        $no = 1;
+	      				        foreach ($pengaduan->result() as $row):
+	      					      // $no++;
+	      			        ?>
                         <tr>
                           <td><?= $no++; ?></td>
-                          <td><?= $pg->judul; ?></td>
-                          <td><?= $pg->desa; ?></td>
-                          <td><?= $pg->kecamatan; ?></td>
-                          <td><?= $pg->keterangan; ?></td>
+                          <td><?= $row->judul; ?></td>
+                          <td><?= $row->nama_kecamatan; ?></td>
+                          <td><?= $row->nama_desa; ?></td>
+                          <!-- <td><?= $row->keterangan; ?></td> -->
+                          <td><span class="badge badge-warning"><?= $row->status; ?></span></td>
                           <td>
                             <!-- <button type="button" class="">Primary</button> -->
-                            <a href="<?= base_url(); ?>pengaduan/detail/<?= $pg->id_pengaduan; ?>" class="btn btn-round btn-info">Detail</a>
-                            <a href="" class="btn btn-round btn-warning">Edit</a>
-                            <a href="" class="btn btn-round btn-danger" onclick="return confirm('Yakin Data ini akan dihapus?')">Hapus</a>
+                            <a href="<?= base_url(); ?>pengaduan/detail/<?= $row->id_pengaduan; ?>" class="btn btn-round btn-info">Detail</a>
+                            <a href="<?= base_url(); ?>pengaduan/get_edit/<?= $row->id_pengaduan; ?>" class="btn btn-round btn-warning">Update</a>
+                            <a href="<?= base_url(); ?>pengaduan/delete/<?= $row->id_pengaduan; ?>" class="btn btn-round btn-danger" onclick="return confirm('Yakin Data ini akan dihapus?')">Hapus</a>
                         </td>
                         </tr>
-                        <?php } ?>
+                        <?php endforeach;?>
                       </tbody>
                     </table>
                   </div>

@@ -18,11 +18,18 @@
     <link href="<?php echo base_url('tema/admin/vendors/nprogress/nprogress.css');?>" rel="stylesheet">
     <!-- iCheck -->
     <link href="<?php echo base_url('tema/admin/vendors/iCheck/skins/flat/green.css');?>" rel="stylesheet">
-	
+    <!-- bootstrap-wysiwyg -->
+	  <link href="<?php echo base_url('tema/admin/vendors/google-code-prettify/bin/prettify.min.css');?>" rel="stylesheet">
+    <!-- Select2 -->
+	  <link href="<?php echo base_url('tema/admin/vendors/select2/dist/css/select2.min.css');?>" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="<?php echo base_url('tema/admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css');?>" rel="stylesheet">
     <!-- JQVMap -->
     <link href="<?php echo base_url('tema/admin/vendors/jqvmap/dist/jqvmap.min.css');?>" rel="stylesheet"/>
+    <!-- Switchery -->
+	  <link href="<?php echo base_url('tema/admin/vendors/switchery/dist/switchery.min.css');?>" rel="stylesheet">
+	  <!-- starrr -->
+	  <link href="<?php echo base_url('tema/admin/vendors/starrr/dist/starrr.css');?>" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="<?php echo base_url('tema/admin/vendors/bootstrap-daterangepicker/daterangepicker.css');?>" rel="stylesheet">
 
@@ -63,6 +70,9 @@
                     
                   </li>
                   <li><a href="<?= base_url(); ?>pengaduan/index/"><i class="fa fa-edit"></i> Pengaduan </a>
+                   
+                  </li>
+                  <li><a href="<?= base_url(); ?>laporan_admin/index/"><i class="fa fa-book"></i> Laporan </a>
                    
                   </li>
                   <!-- <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
