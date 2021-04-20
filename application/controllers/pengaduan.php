@@ -53,12 +53,12 @@ class pengaduan extends CI_Controller {
     }
 
     function save_pengaduan(){
-        $judul   = $this->input->post('judul',TRUE);
+        $judul           = $this->input->post('judul',TRUE);
         $id_kecamatan    = $this->input->post('kecamatan',TRUE);
-        $id_desa = $this->input->post('desa',TRUE);
-        $alamat = $this->input->post('alamat',TRUE);
-        $keterangan  = $this->input->post('keterangan',TRUE);
-        $status = $this->input->post('status', TRUE);
+        $id_desa         = $this->input->post('desa',TRUE);
+        $alamat          = $this->input->post('alamat',TRUE);
+        $keterangan      = $this->input->post('keterangan',TRUE);
+        $status          = $this->input->post('status', TRUE);
         $this->pengaduan_model->save_pengaduan($judul,$id_kecamatan,$id_desa,$alamat,$keterangan,$status);
         $this->session->set_flashdata('msg','<div class="alert alert-success">Data Berhasil Disimpan</div>');
         redirect('pengaduan');

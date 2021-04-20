@@ -5,7 +5,7 @@
     </div>
 <?php } ?>
 <div class="right_col" role="main">
-<a href="<?= base_url(); ?>pengaduan/add_new" class="btn btn-primary">+ Tambah Data</a>
+<a href="<?= base_url(); ?>laporan_admin/tambah" class="btn btn-primary">+ Tambah Data</a>
 <div class="row">
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
@@ -38,9 +38,7 @@
                         <tr>
                           <th>#</th>
                           <th>Judul</th>
-                          <th>Kecamatan</th>
-                          <th>Desa</th>
-                          <!-- <th>Keterangan</th> -->
+                          <th>Keterangan</th>
                           <th>Status</th>
                           <th>Aksi</th>
                         </tr>
@@ -49,21 +47,18 @@
                       <tbody>
                       <?php
 	      				        $no = 1;
-	      				        foreach ($pengaduan->result() as $row):
+	      				        foreach ($laporanadmin as $row):
 	      					      // $no++;
 	      			        ?>
                         <tr>
                           <td><?= $no++; ?></td>
                           <td><?= $row->judul; ?></td>
-                          <td><?= $row->nama_kecamatan; ?></td>
-                          <td><?= $row->nama_desa; ?></td>
-                          <!-- <td><?= $row->keterangan; ?></td> -->
+                          <td><?= $row->ket_berkas; ?></td>
                           <td><span class="badge badge-warning"><?= $row->status; ?></span></td>
                           <td>
                             <!-- <button type="button" class="">Primary</button> -->
-                            <a href="<?= base_url(); ?>pengaduan/detail/<?= $row->id_pengaduan; ?>" class="btn btn-round btn-info">Detail</a>
-                            <a href="<?= base_url(); ?>pengaduan/get_edit/<?= $row->id_pengaduan; ?>" class="btn btn-round btn-warning">Update</a>
-                            <a href="<?= base_url(); ?>pengaduan/delete/<?= $row->id_pengaduan; ?>" class="btn btn-round btn-danger" onclick="return confirm('Yakin Data ini akan dihapus?')">Hapus</a>
+                            <a href="<?= base_url(); ?>laporan_admin/edit/<?= $row->id_laporanadmin; ?>" class="btn btn-round btn-warning">Update</a>
+                            <a href="<?= base_url(); ?>laporan_admin/delete/<?= $row->id_laporanadmin; ?>" class="btn btn-round btn-danger" onclick="return confirm('Yakin Data ini akan dihapus?')">Hapus</a>
                         </td>
                         </tr>
                         <?php endforeach;?>

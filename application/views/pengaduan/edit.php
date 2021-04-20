@@ -77,7 +77,7 @@
 												</div>
 												<div class="radio">
 													<label>
-														<input type="radio" class="flat" value="option2" id="optionsRadios2" name="status" value="Diterima" <?php echo set_radio('status', 'Diterima'); ?> > Diterima
+														<input type="radio" class="flat" id="optionsRadios2" name="status" value="Diterima" <?php echo set_radio('status', 'Diterima'); ?> > Diterima
 													</label>
 												</div>
 											</div>
@@ -149,6 +149,7 @@
                             $('[name="kecamatan"]').val(data[i].pengaduan_kecamatan_id).trigger('change');
                             $('[name="desa"]').val(data[i].pengaduan_desa_id).trigger('change');
                             $('[name="keterangan"]').val(data[i].keterangan);
+							$('[name="alamat"]').val(data[i].alamat);
                         });
                     }
 

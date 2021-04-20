@@ -37,17 +37,18 @@
                         </tr>
                       </thead>
                       <tbody>
+                      
                         <tr>
                           <!-- <th scope="row">1</th> -->
                           <td><?= $pengaduan['id_pengaduan']; ?></td>
                           <td><?= $pengaduan['judul']; ?></td>
-                          <td><?= $pengaduan['desa']; ?></td>
-                          <td><?= $pengaduan['kecamatan']; ?></td>
+                          <td><?= $pengaduan['pengaduan_kecamatan_id']; ?></td>
+                          <td><?= $pengaduan['pengaduan_desa_id']; ?></td>
                           <td><?= $pengaduan['keterangan']; ?></td>
                         </tr>
                       </tbody>
                     </table>
-
+                    
                   </div>
                 </div>
               </div>
